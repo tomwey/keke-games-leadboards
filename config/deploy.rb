@@ -55,6 +55,9 @@ namespace :remote_rake do
   task :migrate do
     run "cd #{deploy_to}/current; RAILS_ENV=production bundle exec rake db:migrate"
   end
+  task :seed do
+    run "cd #{deploy_to}/current; RAILS_ENV=production bundle exec rake db:seed"
+  end
   task :drop do
     run "cd #{deploy_to}/current; RAILS_ENV=production bundle exec rake db:drop"
   end
